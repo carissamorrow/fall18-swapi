@@ -6,10 +6,10 @@ function _draw() {
   let starshipsTemplate = ''
   let actionsTemplate = ''
   if (_starshipsService.prev) {
-    actionsTemplate += `<button onclick="app.controllers.starshipsController.getStarships('${_starshipsService.prev}')">Prev</button>`
+    actionsTemplate += `<button type="button" class="btn btn-lg" onclick="app.controllers.starshipsController.getStarships('${_starshipsService.prev}')">Prev</button>`
   }
   if (_starshipsService.next) {
-    actionsTemplate += `<button onclick="app.controllers.starshipsController.getStarships('${_starshipsService.next}')">Next</button>`
+    actionsTemplate += `<button type="button" class="btn btn-lg" onclick="app.controllers.starshipsController.getStarships('${_starshipsService.next}')">Next</button>`
   }
   _starshipsService.starships.forEach(starship => {
     starshipsTemplate += `<div class="starship">${starship.name}</div>`
@@ -24,7 +24,7 @@ function _draw() {
 
 function drawNavButton() {
   document.getElementById("swapi-nav").innerHTML += `
-  <button onclick="app.controllers.starshipsController.getStarships()">Starship</button>`
+  <button type="button" class="btn btn-lg" onclick="app.controllers.starshipsController.getStarships()">Starship</button>`
 }
 
 function _drawError(error) {

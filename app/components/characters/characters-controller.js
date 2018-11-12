@@ -9,10 +9,10 @@ function _draw() {
 
   //build action buttons
   if (_charactersService.prev) {
-    actionsTemplate += `<button onclick="app.controllers.charactersController.getCharacters('${_charactersService.prev}')">Prev</button>`
+    actionsTemplate += `<button type="button" class="btn btn-lg" onclick="app.controllers.charactersController.getCharacters('${_charactersService.prev}')">Prev</button>`
   }
   if (_charactersService.next) {
-    actionsTemplate += `<button onclick="app.controllers.charactersController.getCharacters('${_charactersService.next}')">Next</button>`
+    actionsTemplate += `<button type="button" class="btn btn-lg" onclick="app.controllers.charactersController.getCharacters('${_charactersService.next}')">Next</button>`
   }
   // loop through characters
   _charactersService.characters.forEach(character => {
@@ -28,7 +28,7 @@ function _draw() {
 
 function drawNavButton() {
   document.getElementById("swapi-nav").innerHTML += `
-  <button onclick="app.controllers.charactersController.getCharacters()">Character</button>`
+  <button type="button" class="btn btn-lg" onclick="app.controllers.charactersController.getCharacters()">Character</button>`
 }
 
 function _drawError(error) {

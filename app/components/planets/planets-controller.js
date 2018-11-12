@@ -6,10 +6,10 @@ function _draw() {
   let planetsTemplate = ''
   let actionsTemplate = ''
   if (_planetsService.prev) {
-    actionsTemplate += `<button onclick="app.controllers.planetsController.getPlanets('${_planetsService.prev}')">Prev</button>`
+    actionsTemplate += `<button type="button" class="btn btn-lg" onclick="app.controllers.planetsController.getPlanets('${_planetsService.prev}')">Prev</button>`
   }
   if (_planetsService.next) {
-    actionsTemplate += `<button onclick="app.controllers.planetsController.getPlanets('${_planetsService.next}')">Next</button>`
+    actionsTemplate += `<button type="button" class="btn btn-lg" onclick="app.controllers.planetsController.getPlanets('${_planetsService.next}')">Next</button>`
   }
   _planetsService.planets.forEach(planet => {
     planetsTemplate += `<div class="planets">${planet.name}</div>`
@@ -24,7 +24,7 @@ function _draw() {
 
 function drawNavButton() {
   document.getElementById("swapi-nav").innerHTML += `
-  <button onclick="app.controllers.planetsController.getPlanets()">Planet</button>`
+  <button type="button" class="btn btn-lg" onclick="app.controllers.planetsController.getPlanets()">Planet</button>`
 }
 
 function _drawError(error) {
