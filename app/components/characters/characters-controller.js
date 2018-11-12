@@ -26,6 +26,11 @@ function _draw() {
   document.getElementById("category-data").innerHTML = charactersTemplate
 }
 
+function drawNavButton() {
+  document.getElementById("swapi-nav").innerHTML += `
+  <button onclick="app.controllers.charactersController.getCharacters()">Character</button>`
+}
+
 function _drawError(error) {
   console.log("Some Error occured", error)
 }
@@ -33,7 +38,8 @@ function _drawError(error) {
 export default class CharactersController {
   constructor() {
     console.log('hello from characters controller')
-    _charactersService.getCharacters(_draw, _drawError)
+    // _charactersService.getCharacters(_draw, _drawError)
+    drawNavButton()
   }
 
   getCharacters(url) {

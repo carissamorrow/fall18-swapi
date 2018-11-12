@@ -14,12 +14,17 @@ function _draw() {
   _planetsService.planets.forEach(planet => {
     planetsTemplate += `<div class="planets">${planet.name}</div>`
   })
-
+  console.log(planetsTemplate)
   document.getElementById("category-title").innerText = "Planets"
   document.getElementById("category-description").innerText = "The planets of star wars"
   document.getElementById("category-actions").innerHTML = actionsTemplate
   document.getElementById("category-data").innerHTML = planetsTemplate
 
+}
+
+function drawNavButton() {
+  document.getElementById("swapi-nav").innerHTML += `
+  <button onclick="app.controllers.planetsController.getPlanets()">Planet</button>`
 }
 
 function _drawError(error) {
@@ -28,7 +33,8 @@ function _drawError(error) {
 
 export default class PlanetsController {
   constructor() {
-    _planetsService.getPlanets(_draw, _drawError)
+    // _planetsService.getPlanets(_draw, _drawError)
+    drawNavButton()
   }
 
   getPlanets(url) {

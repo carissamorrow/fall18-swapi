@@ -4,7 +4,8 @@ import PlanetsController from "./components/planets/planets-controller.js";
 class App {
   constructor() {
     this.controllers = {
-      charactersController: new CharactersController()
+      charactersController: new CharactersController(),
+      planetsController: new PlanetsController()
     }
   }
 }
@@ -13,4 +14,4 @@ class App {
 // @ts-ignore
 window.app = new App()
 
-console.log("The app is up and running")
+

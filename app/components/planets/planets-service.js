@@ -28,6 +28,7 @@ export default class PlanetsService {
   getPlanets(success, fail, url = "") {
     planetsAPI.get(url)
       .then(res => {
+        console.log(res)
         _planets = res.data.results
         nextUrl = res.data.next
         prevUrl = res.data.previous
