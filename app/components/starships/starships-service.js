@@ -1,5 +1,5 @@
 // @ts-ignore
-let starshipssAPI = axios.create({
+let starshipsAPI = axios.create({
   baseURL: "https://swapi.co/api/starships/"
 })
 
