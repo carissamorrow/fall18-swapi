@@ -20,7 +20,7 @@ function _draw() {
   })
 
   // set elements with appropriate data
-  document.getElementById("category-title").innerText = "Characters"
+  document.getElementById("category-title").innerText = ""
   document.getElementById("category-description").innerText = "The many characters of star wars"
   document.getElementById("category-actions").innerHTML = actionsTemplate
   document.getElementById("category-data").innerHTML = charactersTemplate

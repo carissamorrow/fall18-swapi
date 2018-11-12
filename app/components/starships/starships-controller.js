@@ -15,7 +15,7 @@ function _draw() {
     starshipsTemplate += `<div class="starship">${starship.name}</div>`
   })
   console.log(starshipsTemplate)
-  document.getElementById("category-title").innerText = "Starship"
+  document.getElementById("category-title").innerText = ""
   document.getElementById("category-description").innerText = "The starships of star wars"
   document.getElementById("category-actions").innerHTML = actionsTemplate
   document.getElementById("category-data").innerHTML = starshipsTemplate
